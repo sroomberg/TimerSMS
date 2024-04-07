@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimerSMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Twilio Timer App</h1>
+    <form id="smsForm">
+        <div class="form-group">
+            <label for="numbers">Phone Numbers (comma separated)</label>
+            <textarea id="numbers" name="numbers" rows="4" cols="50" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="duration">Timer Duration (in seconds)</label>
+            <input type="number" id="duration" name="duration" required>
+        </div>
+        <button type="submit">Send SMS</button>
+    </form>
+    <div id="status"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
