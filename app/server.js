@@ -19,7 +19,7 @@ app.post('/send-sms', (req, res) => {
         return axios.post('https://textbelt.com/text', {
             phone: number,
             message: message,
-            // key: TEXTBELT_API_KEY
+            // key: TEXTBELT_API_KEY // uncomment for paid version of textbelt
         });
     });
 
