@@ -13,16 +13,8 @@ variable "key_name" {
   description = "EC2 key pair name"
 }
 
-variable "twilio_account_sid" {
-  description = "Twilio Account SID"
-}
-
-variable "twilio_auth_token" {
-  description = "Twilio Auth Token"
-}
-
-variable "twilio_phone_number" {
-  description = "Twilio Phone Number"
+variable "textbelt_api_key" {
+  description = "Textbelt API Key"
 }
 
 
@@ -52,9 +44,7 @@ resource "aws_instance" "app_server" {
               npm install
 
               # Create environment variables file
-              echo "TWILIO_ACCOUNT_SID=${var.twilio_account_sid}" >> .env
-              echo "TWILIO_AUTH_TOKEN=${var.twilio_auth_token}" >> .env
-              echo "TWILIO_PHONE_NUMBER=${var.twilio_phone_number}" >> .env
+              echo "TEXTBELT_API_KEY=${var.textbelt_api_key}" >> .env
 
               # Start the application
               node server.js &
