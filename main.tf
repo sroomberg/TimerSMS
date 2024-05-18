@@ -15,6 +15,7 @@ variable "key_name" {
 
 variable "textbelt_api_key" {
   description = "Textbelt API Key"
+  default     = ""
 }
 
 
